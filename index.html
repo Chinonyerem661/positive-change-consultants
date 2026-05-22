@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Positive Change Consultants</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Positive Change Consultants home">
+        <img src="assets/positive-change-logo-cropped.png" alt="Positive Change Consultants" />
+      </a>
+      <nav class="pill-nav" aria-label="Primary navigation">
+        <a href="#platform">Platform</a>
+        <a href="#appointments">Appointments</a>
+        <a href="#calendar">Calendar</a>
+        <a class="nav-cta" href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Medical transformation & growth</p>
+          <h1>Engineering better healthcare operations.</h1>
+          <p>
+            Positive Change Consultants helps medical practices simplify patient flow, strengthen teams, and build growth systems that can actually be maintained.
+          </p>
+          <a class="button light" href="#appointments">Book a consultation</a>
+        </div>
+      </section>
+
+      <section class="narrative-section" aria-label="What we do">
+        <div class="section-index">01 / 04</div>
+        <div class="narrative-copy">
+          <p class="eyebrow">What we do</p>
+          <h2>We turn complex clinic challenges into clear, measurable operating systems.</h2>
+          <p>
+            Every engagement starts by mapping the real patient journey: scheduling, intake, care delivery, documentation, follow-up, and team handoffs.
+          </p>
+          <p>
+            From there, we create practical improvement plans for owners, administrators, and clinical leads so the practice can move with less friction and more confidence.
+          </p>
+        </div>
+      </section>
+
+      <section id="platform" class="platform-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">The consultancy platform</p>
+            <h2>Assessment, implementation, and advisory support in one operating model.</h2>
+          </div>
+          <a class="button dark" href="#appointments">Start with an assessment</a>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80" alt="Medical team reviewing clinical operations" />
+            <span>01.</span>
+            <h3>Operations Review</h3>
+            <p>Identify friction in appointment flow, front desk routines, staffing, documentation, and patient experience.</p>
+          </article>
+          <article class="feature-card">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=80" alt="Healthcare professional using clinical technology" />
+            <span>02.</span>
+            <h3>Growth Planning</h3>
+            <p>Build realistic service-line, referral, outreach, and retention plans grounded in your practice capacity.</p>
+          </article>
+          <article class="feature-card">
+            <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=900&q=80" alt="Laboratory and healthcare quality process" />
+            <span>03.</span>
+            <h3>Team Enablement</h3>
+            <p>Align responsibilities, handoffs, leadership rhythms, and simple accountability systems for daily execution.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="company-band">
+        <div class="company-image">
+          <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1400&q=80" alt="Consultant and clinician reviewing healthcare records" />
+        </div>
+        <div class="company-copy">
+          <p class="eyebrow">Our company</p>
+          <h2>Bold practical support for clinics ready to improve how care gets delivered.</h2>
+          <p>
+            We work with medical leaders who want thoughtful strategy, clean execution, and a calmer operating cadence for patients and staff.
+          </p>
+        </div>
+      </section>
+
+      <section id="appointments" class="appointment-section">
+        <div class="section-copy">
+          <p class="eyebrow">Appointments</p>
+          <h2>Request a consultation.</h2>
+          <p>
+            Choose a preferred date and time. Submitted requests are saved in this browser and shown on the live calendar.
+          </p>
+          <div class="status-card">
+            <span>Current time</span>
+            <strong id="currentTime">Loading...</strong>
+          </div>
+        </div>
+
+        <form id="appointmentForm" class="appointment-form">
+          <label>
+            Full name
+            <input name="name" type="text" placeholder="Your name" required />
+          </label>
+          <label>
+            Email address
+            <input name="email" type="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Phone number
+            <input name="phone" type="tel" placeholder="+1 555 0134" required />
+          </label>
+          <div class="form-row">
+            <label>
+              Date
+              <input name="date" type="date" required />
+            </label>
+            <label>
+              Time
+              <input name="time" type="time" required />
+            </label>
+          </div>
+          <label>
+            Consultancy need
+            <select name="service" required>
+              <option value="">Select a service</option>
+              <option>Operations Review</option>
+              <option>Growth Planning</option>
+              <option>Team Enablement</option>
+              <option>General Consultation</option>
+            </select>
+          </label>
+          <label>
+            Notes
+            <textarea name="notes" rows="4" placeholder="Tell us what you want to improve"></textarea>
+          </label>
+          <button class="button dark" type="submit">Submit appointment</button>
+          <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section id="calendar" class="calendar-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Live calendar</p>
+            <h2>Availability and requests.</h2>
+          </div>
+          <div class="calendar-controls">
+            <button id="previousMonth" type="button" aria-label="Previous month">&lsaquo;</button>
+            <strong id="calendarTitle">Month</strong>
+            <button id="nextMonth" type="button" aria-label="Next month">&rsaquo;</button>
+          </div>
+        </div>
+        <div class="calendar-layout">
+          <div class="calendar-grid" id="calendarGrid" aria-label="Monthly calendar"></div>
+          <aside class="appointments-list">
+            <div class="list-header">
+              <h3>Requested appointments</h3>
+              <button id="clearAppointments" type="button">Clear</button>
+            </div>
+            <div id="appointmentList"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="faq" class="faq-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">FAQ</p>
+            <h2>Common questions.</h2>
+          </div>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>Who do you consult for?</summary>
+            <p>We support medical practices, outpatient clinics, wellness providers, and healthcare administrators who want clearer systems and measurable improvement.</p>
+          </details>
+          <details>
+            <summary>Can I request a virtual appointment?</summary>
+            <p>Yes. Add your preference in the appointment notes and the team can confirm the meeting format during follow-up.</p>
+          </details>
+          <details>
+            <summary>What happens after I submit an appointment?</summary>
+            <p>Your request appears on the calendar immediately. A real production site would connect this form to email, CRM, or scheduling software.</p>
+          </details>
+          <details>
+            <summary>Do you handle urgent medical issues?</summary>
+            <p>No. This site is for consultancy appointments only. Patients with urgent symptoms should contact emergency services or a licensed clinician directly.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <img src="assets/positive-change-logo-cropped.png" alt="Positive Change Consultants" />
+        <h2>We help medical practices move from pressure to positive change.</h2>
+      </div>
+      <a class="button light" href="#appointments">Work with us</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
